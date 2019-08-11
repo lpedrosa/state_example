@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>State Example</title>
+</head>
+
+<body>
+    <h1>My Users</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Login</th>
+            <th>Summary</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.name}}</td>
+            <td>
+                <a href="/request_consent?user_id={{user.id}}">Link</a>
+            </td>
+            <td>
+                <a href="/summary/{{user.id}}">Go to summary</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

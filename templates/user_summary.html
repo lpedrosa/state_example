@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>User summary</title>
+</head>
+
+<body>
+    <h1>Summary for {{summary.user_name}}</h1>
+
+    <table>
+        <tr>
+            <th>Bank</th>
+            <th>Number of accounts</th>
+        </tr>
+        {% for row in summary.accounts_summary %}
+        <tr>
+            <td>{{row.provider}}</td>
+            <td>{{row.num_accounts}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
